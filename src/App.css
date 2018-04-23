@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+#story_text{
+  margin:5rem;
+}
+
+#styled_button{
+  position: relative;
+  display: inline-block;
+  padding: 1.2em 2em;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  color: #3e5ce0;
+  font-family: 'Montserrat';
+
+}
+
+&::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(135deg, #36d0f7, #31f995);
+  border-radius: 4px;
+  transition: box-shadow .5s ease, transform .2s ease;
+  will-change: transform;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  transform:
+    translateY(var(--ty, 0))
+    rotateX(var(--rx, 0))
+    rotateY(var(--ry, 0))
+    translateZ(var(--tz, -12px));
+}
+
+&:hover::before {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+}
+
+&::after {
+  position: relative;
+  display: inline-block;
+  content: attr(data-title);
+  transition: transform .2s ease;
+  font-weight: bold;
+  letter-spacing: .01em;
+  will-change: transform;
+  transform:
+    translateY(var(--ty, 0))
+    rotateX(var(--rx, 0))
+    rotateY(var(--ry, 0));
+}
+
+
+#story_text{
+  font-size: 14px;
+  font-family: 'Montserrat';
+}
+
+ #fullscreen{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -3;
+  opacity:.2;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+
+ }
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
