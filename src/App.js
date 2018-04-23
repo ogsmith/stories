@@ -6,7 +6,6 @@ import Sound from 'react-sound';
 import ReactPlayer from 'react-player'
 import { Player } from 'video-react';
 
-
 export default class App extends Component {
   constructor(props) {
   super(props);
