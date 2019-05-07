@@ -3,7 +3,7 @@ import cx_Oracle
 from flask import Flask
 
 db_user = 'opc'
-db_password = 'R@nger2211'
+db_password = 'x'
 db_connect = '129.156.113.135'
 
 app = Flask(__name__)
